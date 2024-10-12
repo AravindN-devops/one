@@ -1,3 +1,3 @@
-FROM httpd:2.4
-COPY tomcat-users.xml /usr/local/apache2/conf/tomcat-users.xml
-COPY target/*.war /usr/local/apache2/htdocs/
+FROM tomcat:8.0.20-jre8
+COPY tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
+COPY target/*.war /usr/local/tomcat/webapp/japp.war
